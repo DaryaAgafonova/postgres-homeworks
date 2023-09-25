@@ -4,7 +4,7 @@
 """ Выводит company_name - название customer и объединение двух колонок - employee таблицы customers, где берет все с 1 колонки и дополняет 2 по customer_id, employee_id и shipper_id, далее где города заказчика и сотрудника - London, а компания - United Package. """
 SELECT customers.company_name AS customer,
 CONCAT(employees.first_name, ' ', employees.last_name) AS employee
-FROM customers
+FROM orders
 INNER JOIN customers USING(customer_id)
 INNER JOIN employees USING(employee_id)
 INNER JOIN shippers ON customers.ship_via=shippers.shipper_id

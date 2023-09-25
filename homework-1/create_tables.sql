@@ -1,6 +1,5 @@
 -- SQL-команды для создания таблиц
 
-""" Создание таблицы customers. """
 CREATE TABLE customers
 (
     customer_id VARCHAR(100) NOT NULL,
@@ -13,7 +12,7 @@ SELECT * FROM customers;
 """ Создание таблицы employees. """
 CREATE TABLE employees
 (
-    employee_id INT PRIMARY KEY,
+    employee_id INT,
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(100) NOT NULL,
     title VARCHAR(100) NOT NULL,
