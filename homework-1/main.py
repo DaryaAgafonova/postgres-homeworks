@@ -34,8 +34,8 @@ employees_csv = 'north_data/employees_data.csv'
 filling_in_tables('employees', employees_csv)
 
 # Заполнение таблицы customers данными
-#customers_csv = 'north_data/customers_data.csv'
-#filling_in_tables('customers', customers_csv)
+customers_csv = 'north_data/customers_data.csv'
+filling_in_tables('customers', customers_csv)
 
 # Заполнение таблицы orders данными
 orders_csv = 'north_data/orders_data.csv'
