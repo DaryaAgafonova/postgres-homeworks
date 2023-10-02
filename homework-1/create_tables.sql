@@ -1,5 +1,6 @@
 -- SQL-команды для создания таблиц
 
+""" Создание таблицы customers. """
 CREATE TABLE customers
 (
     customer_id VARCHAR(100) PRIMARY KEY,

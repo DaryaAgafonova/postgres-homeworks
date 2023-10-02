@@ -10,20 +10,5 @@ SELECT * INTO top_products FROM products WHERE discontinued = 1;
 
 -- 4. Удалить из products товары, снятые с продажи (discontinued = 1)
 -- Для 4-го пункта может потребоваться удаление ограничения, связанного с foreign_key. Подумайте, как это можно решить, чтобы связь с таблицей order_details все же осталась.
-""" Создаем временную таблицу и копируем  в нее актуальные записи. """
-CREATE TABLE temp_products AS
-SELECT *
-FROM products
-WHERE discontinued = 0;
-
-""" Удаляем записи с discontinued = 1 из таблицы products. """
-DELETE FROM products
-WHERE discontinued = 1;
-
-""" Возвращем записи из временной таблицы обратно в products. """
-INSERT INTO products
-SELECT *
-FROM temp_products;
-
-""" Удаляем временную таблицу. """
-DROP TABLE temp_products;
+""" Обновляем все данные в таблице products, у которых discontinued=1. """
+UPDATE products SET discontinued=1;
